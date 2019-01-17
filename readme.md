@@ -14,3 +14,4 @@
 dev 的配置
 
 //  --open 自动打开浏览器  --port 端口号  --host域名地址
+"dev":"webpack-dev-server --open --port 3000 --hot "
