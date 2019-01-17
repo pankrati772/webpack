@@ -15,3 +15,22 @@ dev 的配置
 
 //  --open 自动打开浏览器  --port 端口号  --host域名地址
 "dev":"webpack-dev-server --open --port 3000 --hot "
+
+把网页储存到内存中去
+cnpm i html-webpack-plugin -D
+
+在webpack.config.js中引入且使用
+const path = require('path');
+const Html =  require('html-webpack-plugin')
+const html = new Html({
+   template:paht.join(__dirname,'网址路径'),
+   filename:'index.html'
+})
+
+
+module.exports={
+   mode:'production',
+   plugins:[
+      html
+   ]
+}
